@@ -19,49 +19,53 @@ class Landing extends React.Component {
   }
   render () {
     return (
-
       <Jumbotron>
-        <Navbar>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#home">Home</a>
-            </Navbar.Brand>
-          </Navbar.Header>
-          <Nav>
-            <NavItem eventKey={1} href="#">
-              About
-            </NavItem>
-            <NavItem eventKey={2} href="#">
-              Contact
-            </NavItem>
-            <NavDropdown eventKey={3} title="Services" id="basic-nav-dropdown">
-              <MenuItem eventKey={3.1}>Action</MenuItem>
-              <MenuItem eventKey={3.2}>Another action</MenuItem>
-              <MenuItem eventKey={3.3}>Something else here</MenuItem>
-              <MenuItem divider />
-              <MenuItem eventKey={3.4}>Separated link</MenuItem>
-            </NavDropdown>
-          </Nav>
-        </Navbar>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Horne's Piano Service</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <h1 class="display-3">Horne's Piano Service</h1>
-          <p>
-            Welcome to Horne's Piano service! Our site is curently under construction, but you can get in touch with us using one of the methods below.
-          </p>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <h1 class="display-2">Hi there!</h1>
+          <h3>
+            Our site is curently under construction, but you can get in touch with us using one of the methods below.
+          </h3>
           <Grid>
             <Row>
               <Col xs={6} md={4}>
-              <p>Phone: XXX-XXX-XXXX</p>
-
+              <h5><strong>Call/Text:</strong> 816-585-3980</h5>
               </Col>
               <Col xs={6} md={4}>
+              <h5>
                 Email: hornespianoservice@gmail.com
+              </h5>
               </Col>
               <Col xs={6} md={4}>
+              <h5>
                 Facebook: Horne's Piano Service
+              </h5>
               </Col>
             </Row>
+
+            <Image src="/strings.jpg" responsive/>
+
           </Grid>
+
+
       </Jumbotron>
 
     )
@@ -69,3 +73,5 @@ class Landing extends React.Component {
 }
 
 export default Landing;
+
+
